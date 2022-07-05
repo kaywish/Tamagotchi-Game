@@ -1,0 +1,17 @@
+.background {
+    max-width: 1250px;
+}
+
+.new {
+    position: relative;
+    left: 80px;
+    bottom: 100px;
+}
+
+.character {
+    position: relative;
+    left: 80px;
+    bottom: 500px;
+    
+    
+}
