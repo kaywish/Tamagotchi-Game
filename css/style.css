@@ -8,18 +8,19 @@
     bottom: 300px;
 }
 
+
 .character {
   max-width: 100px;;
   position: relative;
   left:700px;
   right: 700px;
   bottom: 300px;
-  animation-name: character;
-  animation-duration: 1000s;
- animation-iteration-count: 100;
+  animation: left-to-right 3s ease-in forwards infinite alternate   ;
+
 }
 
-@keyframes example { 
-    
+@keyframes left-to-right{
+    100%{
+        transform: translateX(100%);
+    }
 }
-
