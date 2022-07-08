@@ -1,5 +1,6 @@
 .background {
     max-width: 1250px;
+
 }
 
 .new {
@@ -7,6 +8,13 @@
     left: 80px;
     bottom: 300px;
 }
+
+button {
+    position: relative;
+    left: 80px;
+    bottom: 300px;
+}
+
 
 
 .character {
@@ -24,3 +32,14 @@
         transform: translateX(100%);
     }
 }
+
+
+#stats {
+    position: relative;
+    left: 80px;
+    bottom: 800px;
+    color: white;
+    
+}
+
+
