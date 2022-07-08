@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="app/app.js"> </script>
     <link rel = "stylesheet" href="css/style.css"> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
+    
 <img class = "background" src="Background.jpg">
 <img class = "character" src= "Character.png">
 
@@ -16,18 +16,19 @@
 <button id="feed">Feed</button>
 <button id= "play" >Play</button>
 <button id = "rest" >Rest</button>
-<button id = "lights">Lights</button>
+<button id = "lights" onclick="test()">Lights</button>
 
 
 
 <div id = "stats">
     <h2 id="name"> Name: </h2>
-    <h2> Food Level: </h2>
+    <h2 id = "food"> Food Level: </h2>
     <h2> Fun Level:</h2>
     <h2> Energry Level:</h2>
     <h2 id="age"> Age: </h2>
 </div>
 
+<script src="app/app.js"> </script>
 </body>
 
 </html>

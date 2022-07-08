@@ -1,8 +1,8 @@
 // NAME YOUR PET //
-// const NameMe = prompt(" Name your pet")
-// const WhatUp= document.getElementById("name")
+// const nameMe = prompt(" Name your pet")
+// const whatUp= document.querySelector("#name")
 
-// WhatUp.innerHTML=("Name:" + NameMe)
+// whatUp.innerText=`Name : ${nameMe}`
 
 
 
@@ -28,7 +28,18 @@ console.log("Age is " + this.age)
 }
 
    
- eatFood(num){ 
+ eatFood(){ 
+const passTime = setInterval(() => {
+    const eatNow = document.getElementById("food")
+    eatNow.innerHTML=("Food Level: " + this.hunger)
+    this.hunger++
+if (this.hunger == 3) {
+    alert("Your pet died").player.newGame() 
+}
+
+console.log(passTime)
+}, 2000);
+
 console.log("Your pet ate an apple " + (this.hunger+= num))
 
  }
@@ -66,18 +77,25 @@ if (this.boredom == 10)
 
 
 }
+test() {
+    alert("work")
+}
+
 
 
 
 }
+const player = new Tamagotchi
 
 //EVENTS
 
 //New Game
-document.getElementById("start").addEventListener("click", (e) => newGame() )    
-
+const startButton= document.getElementById("start")
+startButton.addEventListener("click", (e) => {
+    console.log("hello from start") 
+    player.newGame()} )    
 // Eat Food
-document.getElementById("feed").addEventListener("click", (e) => eatFood() )    
+document.getElementById("feed").addEventListener("click", (e) => player.eatFood() )    
 
 // Rest
 document.getElementById("rest").addEventListener("click", (e) => rest() )    
@@ -94,9 +112,7 @@ document.getElementById("lights").addEventListener("click", (e) => lightSwitch()
 
 
 
-const player = new Tamagotchi
 
-player.addAge();
 
 
 
