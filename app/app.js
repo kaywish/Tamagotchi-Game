@@ -20,29 +20,51 @@ class Tamagotchi{
 
 
  newGame(){
-console.log("Hunger level is "+this.hunger)
-console.log("Sleepiness level is"+ this.sleepiness)
-console.log("Boredom level is " +this.boredom) 
-console.log("Age is " + this.age)
- 
-}
-
-   
- eatFood(){ 
+// console.log("Hunger level is "+this.hunger)
+// console.log("Sleepiness level is"+ this.sleepiness)
+// console.log("Boredom level is " +this.boredom) 
+// console.log("Age is " + this.age)
 const passTime = setInterval(() => {
     const eatNow = document.getElementById("food")
     eatNow.innerHTML=("Food Level: " + this.hunger)
     this.hunger++
-if (this.hunger == 3) {
-    alert("Your pet died").player.newGame() 
+ 
+if (this.hunger == 4) {
+    alert("Your pet died")
+
 }
+
+console.log(passTime)
+}, 3000);
+
+}
+
+
+//EAT FOOD FUNCTION//
+ eatFood(){ 
+const passTime = setInterval(() => {
+    const eatNow = document.getElementById("food")
+    eatNow.innerHTML=("Food Level: " + this.hunger)
+    this.hunger--
+    if (this.hunger ===0)
+    this.hunger ++
+
+    {
+        
+    }
+ 
+// if (this.hunger == 4) {
+//     alert("Your pet died")
+
+// }
 
 console.log(passTime)
 }, 2000);
 
-console.log("Your pet ate an apple " + (this.hunger+= num))
-
+console.log("Your pet ate an apple ")
  }
+
+ ///////////
 
 rest(num){
   console.log(" Your pet is well rested " + (this.sleepiness+=num))
@@ -58,9 +80,11 @@ ageUp(num){
 
 }
 
-lightSwitch() {
-    console.log(" You pressed the light switch")
+
+lightOn() {
+
 }
+
 
 
 countUp() {
@@ -87,6 +111,16 @@ test() {
 }
 const player = new Tamagotchi
 
+
+
+
+
+
+
+
+
+
+
 //EVENTS
 
 //New Game
@@ -104,8 +138,11 @@ document.getElementById("rest").addEventListener("click", (e) => rest() )
 document.getElementById("play").addEventListener("click", (e) => playNow() )    
 
 // Light Switch
-document.getElementById("lights").addEventListener("click", (e) => lightSwitch() )    
-
+const getOn =document.getElementById("light on")
+getOn.addEventListener("click", (e) => {
+  
+   player.lightOn()})
+  
 
 
 

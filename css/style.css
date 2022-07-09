@@ -3,6 +3,10 @@
 
 }
 
+#night {
+    max-width: 1250px;
+}
+
 .new {
     position: relative;
     left: 80px;
