@@ -38,7 +38,7 @@ if (this.hunger == 10) {
 }
 
 console.log(passTime)
-}, 3000);
+}, 2000);
 
 /////////////////////////////
 // Sleep
@@ -53,7 +53,7 @@ if (this.sleepiness == 100) {
 }
 
 console.log(sleepTime)
-}, 3000);
+}, 4000);
 
 /////////////////////////////
 // Fun
@@ -69,7 +69,7 @@ if (this.boredom == 100) {
 }
 
 console.log(funTime)
-}, 3000);
+}, 5000);
 
 ///////////////////////////////
 // Age
@@ -122,7 +122,7 @@ const passTime = setInterval(() => {
     }
  
 console.log(passTime)
-}, 1000);
+}, 200);
 
 console.log("Your pet ate an apple ")
 }
@@ -142,7 +142,7 @@ rest(){
             
         }
   
-    }, 1000);
+    }, 200);
     
     console.log("Your pet is well rested")
     }
@@ -160,7 +160,7 @@ haveFun() {
             
         }
   
-    }, 1000);
+    }, 200);
     
     console.log("Your pet is having fun")
     }
