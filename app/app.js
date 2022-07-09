@@ -32,7 +32,7 @@ const passTime = setInterval(() => {
     eatNow.innerHTML=("Food Level: " + this.hunger)
     this.hunger++
  
-if (this.hunger == 10) {
+if (this.hunger == 9) {
     alert("Your pet died")
 
 }
@@ -47,7 +47,7 @@ const sleepTime = setInterval(() => {
     eatNow.innerHTML=("Energy Level: " + this.sleepiness)
     this.sleepiness++
  
-if (this.sleepiness == 100) {
+if (this.sleepiness == 9) {
     alert("Your pet died")
 
 }
@@ -63,7 +63,7 @@ const funTime = setInterval(() => {
     eatNow.innerHTML=("Fun Level: " + this.boredom)
     this.boredom++
  
-if (this.boredom == 100) {
+if (this.boredom == 9) {
     alert("Your pet died")
 
 }
