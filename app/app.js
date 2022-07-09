@@ -47,7 +47,7 @@ const sleepTime = setInterval(() => {
     eatNow.innerHTML=("Energy Level: " + this.sleepiness)
     this.sleepiness++
  
-if (this.sleepiness == 10) {
+if (this.sleepiness == 100) {
     alert("Your pet died")
 
 }
@@ -63,7 +63,7 @@ const funTime = setInterval(() => {
     eatNow.innerHTML=("Fun Level: " + this.boredom)
     this.boredom++
  
-if (this.boredom == 10) {
+if (this.boredom == 100) {
     alert("Your pet died")
 
 }
@@ -79,20 +79,17 @@ const ageTime = setInterval(() => {
     eatNow.innerHTML=("Age: " + this.age)
     this.age++
  
-if (this.age == 3) {
+if (this.age == 4) {
     alert("Your pet grew!")
+    
+document.querySelector(".character").src="young.jpg"
 
 }
 
 if (this.age == 6){
     alert(" Your pet grew!")
+document.querySelector(".character").src="Character.png"
 }
-
-if (this.age == 9){
-    alert(" Your pet wont stop growing!")
-}
-
-
 
 
 
@@ -117,58 +114,68 @@ const passTime = setInterval(() => {
     const eatNow = document.getElementById("food")
     eatNow.innerHTML=("Food Level: " + this.hunger)
     this.hunger--
-    if (this.hunger ===0)
-    this.hunger ++
+    if (this.hunger == 0)
+    clearInterval(passTime)
 
     {
         
     }
  
 console.log(passTime)
-}, 2000);
+}, 1000);
 
 console.log("Your pet ate an apple ")
 }
 
+ //REST FUNCTION//
 
+rest(){
 
-
-
-
-
- ///////////
-
-rest(num){
-  console.log(" Your pet is well rested " + (this.sleepiness+=num))
-}
-
- playNow(num){
-   console.log("Your pet is having fun "+ (this.boredom += num))
- }
-
-ageUp(num){
- {  
+    const passTime = setInterval(() => {
+        const eatNow = document.getElementById("energy")
+        eatNow.innerHTML=("Energy Level: " + this.sleepiness)
+        this.sleepiness--
+        if (this.sleepiness == 0)
+        clearInterval(passTime)
+    
+        {
+            
+        }
+  
+    }, 1000);
+    
+    console.log("Your pet is well rested")
     }
 
+//PLAY FUNCTION
+haveFun() {
+    const passTime = setInterval(() => {
+        const eatNow = document.getElementById("fun")
+        eatNow.innerHTML=("Fun Level: " + this.boredom)
+        this.boredom--
+        if (this.boredom == 0)
+        clearInterval(passTime)
+    
+        {
+            
+        }
+  
+    }, 1000);
+    
+    console.log("Your pet is having fun")
+    }
+
+
 }
 
 
-lightOn() {
 
-}
-
+  
 
 
 
 
-test() {
-    alert("work")
-}
 
-
-
-
-}
 const player = new Tamagotchi
 
 
@@ -192,13 +199,17 @@ startButton.addEventListener("click", (e) => {
 document.getElementById("feed").addEventListener("click", (e) => player.eatFood() )    
 
 // Rest
-document.getElementById("rest").addEventListener("click", (e) => rest() )    
+document.getElementById("rest").addEventListener("click", (e) => player.rest() )    
 
 // Play
-document.getElementById("play").addEventListener("click", (e) => playNow() )    
+document.getElementById("play").addEventListener("click", (e) => player.haveFun() )    
 
-// Light Switch
-// const backGround= ("#000000")
+
+
+
+
+// Light Switch//
+
 const getOn =document.getElementById("light off")
 getOn.addEventListener("click", (e) => {
     console.log("hi",document.querySelector(".background").src)
@@ -217,7 +228,12 @@ getOff.addEventListener("click", (e) => {
 
 
 
-   player.lightOn()
+
+
+
+
+
+player.lightOn()
   
 
 
